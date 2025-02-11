@@ -87,7 +87,7 @@ const Portfolio = () => {
             <section id="skills">
                 <h1>SKILLS <span role="img" aria-label="tools">🔧</span></h1>
                 <div class="container">
-            <div style={{margin:"15px"}}>
+            <div  style={{margin:"15px"}}>
                 Java
                 <div class="skill">
                     <div id="skill" class="skill-java"></div>
@@ -143,7 +143,7 @@ const Portfolio = () => {
                 <h1>PROJECTS <span role="img" aria-label="projects">🧑🏻‍💻</span></h1>
                 <div className="container">
                     {projects.map((project) => (
-                        <div key={project.title} className={project.className}>
+                        <div key={project.title} className={project.className}   style={{animationDelay: `${Math.random() * 2}s`}}>
                             <div>
                                 <h3>{project.title}</h3>
                                 <b>Description</b>
@@ -164,7 +164,6 @@ const Portfolio = () => {
                     ))}
                 </div>
             </section>
-
             <section id="connect">
                 <div className="container">
                     <h1>CONNECT WITH ME <span role="img" aria-label="earth">🌐</span></h1>
@@ -210,6 +209,13 @@ const projects = [
         link: 'https://github.com/KAVIN-KJ/SkySage',
         className: 'skysage',
     },
+    {
+        title: 'IoT-Based Web-Controlled Servo & Distance Monitoring',
+        description: 'Developed a full-stack IoT system to remotely control a servo motor and monitor real-time distance data using cloud-based automation.',
+        technologies: [ "Arduino", "Node.js", "Express", "React", "Axios", "SerialPort"],
+        link: 'https://github.com/KAVIN-KJ/Servo-Motor-Remote-Interfacing',
+        className: 'IoT',
+    }
 ];
 
 const socialLinks = [
