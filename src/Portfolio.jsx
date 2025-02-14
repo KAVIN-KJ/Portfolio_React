@@ -215,6 +215,13 @@ const projects = [
         technologies: [ "Arduino", "Node.js", "Express", "React", "Axios", "SerialPort"],
         link: 'https://github.com/KAVIN-KJ/Servo-Motor-Remote-Interfacing',
         className: 'IoT',
+    },
+    {
+        title: 'Billing Information System',
+        description: ' Designed a system to generate and print billing information for purchase orders with accuracy using ReactJS.',
+        technologies: [ "React","Javascript"],
+        link: 'https://github.com/KAVIN-KJ/Purchase_Orders',
+        className: 'Billing_System',
     }
 ];
 
@@ -222,7 +229,7 @@ const socialLinks = [
     { link: 'mailto:kavinkj2004@gmail.com', image: gmail, alt: 'Gmail', padding: '0px 50px 0px 50px' },
     { link: 'https://github.com/KAVIN-KJ', image: git, alt: 'Github' },
     { link: 'https://www.linkedin.com/in/kavin-raja-k-j-53773b256/', image: linked, alt: 'LinkedIn' },
-    { link: 'https://www.instagram.com/k_j_k_r/', image: insta, alt: 'Instagram' },
+    { link: 'https://www.instagram.com/_kjkr_/', image: insta, alt: 'Instagram' },
 ];
 
 export default Portfolio;
