@@ -10,9 +10,18 @@ import frontend from './assets/Frontend.png'
 import android from './assets/Android.png'
 import react from './assets/react.svg'
 import linux from './assets/Linux.png'
-import resume from './assets/UPDATED RESUME.pdf'
+import resume from './assets/Updated_Resume.pdf'
+import AIML from './assets/AIML.png'
 import problemsolving from './assets/ProblemSolving.png'
 const Portfolio = () => {
+    const imageMap = {  
+        frontend,  
+        android,  
+        react,  
+        problemsolving,  
+        linux,  
+        AIML  
+    };
     const[img,setImg] = useState(frontend);
     return (
         <div className='portfolio-container'>
@@ -52,21 +61,21 @@ const Portfolio = () => {
                             MySQL, and Data Structures and Algorithms (DSA).
                         </p>
                     </div>
-                    <div className="interest">
-                        <div> 
-                            <h1>I'm Interested in</h1>
-                            <ul>
-                                <li onClick={()=>{setImg(frontend)}} className="fntend">Frontend Development</li>
-                                <li onClick={()=>{setImg(android)}} >Android App Development</li>
-                                <li onClick={()=>{setImg(react)}}>ReactJS</li>
-                                <li onClick={()=>{setImg(problemsolving)}}> Problem solving</li>
-                                <li onClick={()=>{setImg(linux)}}>Linux</li>
-                            </ul>
-                        </div>
-                        <div className='interest-image'>
-                            <img src={img} alt="" />
-                        </div>
-                    </div>
+                    <div className="interest">  
+            <div>  
+                <h1>I'm Interested in</h1>  
+                <ul>  
+                    {Object.keys(imageMap).map((key) => ( 
+                        <li key={key} onMouseEnter={() => setImg(imageMap[key])}>  
+                            {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, " $1")}  
+                        </li>  
+                    ))}  
+                </ul>  
+            </div>  
+            <div className='interest-image'>  
+                <img src={img} alt="Interest" />  
+            </div>  
+        </div>  
                 </div>
             </section>
 
@@ -95,27 +104,16 @@ const Portfolio = () => {
             </div>
 
             <div style={{margin:"15px"}}>
-                Kotlin
-                <div class="skill">
-                    <div id="skill" class="skill-kotlin"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
                 C++
                 <div class="skill">
                     <div id="skill" class="skill-cpp"></div>
                 </div>
             </div>
+
             <div style={{margin:"15px"}}>
-                HTML, CSS & JS
+                Python
                 <div class="skill">
-                    <div id="skill" class="skill-html"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                Android
-                <div class="skill">
-                    <div id="skill" class="skill-android"></div>
+                    <div id="skill" class="skill-python"></div>
                 </div>
             </div>
             <div style={{margin:"15px"}}>
@@ -125,15 +123,33 @@ const Portfolio = () => {
                 </div>
             </div>
             <div style={{margin:"15px"}}>
-                MySQL DBMS
+                HTML, CSS & JS
                 <div class="skill">
-                    <div id="skill" class="skill-dbms"></div>
+                    <div id="skill" class="skill-html"></div>
+                </div>
+            </div>
+            <div style={{margin:"15px"}}>
+                Kotlin
+                <div class="skill">
+                    <div id="skill" class="skill-kotlin"></div>
                 </div>
             </div>
             <div style={{margin:"15px"}}>
                 Linux
                 <div class="skill">
                     <div id="skill" class="skill-linux"></div>
+                </div>
+            </div>
+            <div style={{margin:"15px"}}>
+                Android
+                <div class="skill">
+                    <div id="skill" class="skill-android"></div>
+                </div>
+            </div>
+            <div style={{margin:"15px"}}>
+                MySQL DBMS
+                <div class="skill">
+                    <div id="skill" class="skill-dbms"></div>
                 </div>
             </div>
         </div>
