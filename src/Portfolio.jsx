@@ -14,15 +14,15 @@ import resume from './assets/Updated_Resume.pdf'
 import AIML from './assets/AIML.png'
 import problemsolving from './assets/ProblemSolving.png'
 const Portfolio = () => {
-    const imageMap = {  
-        frontend,  
-        android,  
-        react,  
-        problemsolving,  
-        linux,  
-        AIML  
+    const imageMap = {
+        frontend,
+        android,
+        react,
+        problemsolving,
+        linux,
+        AIML
     };
-    const[img,setImg] = useState(frontend);
+    const [img, setImg] = useState(frontend);
     return (
         <div className='portfolio-container'>
             <div className="scroll-watcher"></div>
@@ -61,21 +61,21 @@ const Portfolio = () => {
                             MySQL, and Data Structures and Algorithms (DSA).
                         </p>
                     </div>
-                    <div className="interest">  
-            <div>  
-                <h1>I'm Interested in</h1>  
-                <ul>  
-                    {Object.keys(imageMap).map((key) => ( 
-                        <li key={key} onMouseEnter={() => setImg(imageMap[key])}>  
-                            {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, " $1")}  
-                        </li>  
-                    ))}  
-                </ul>  
-            </div>  
-            <div className='interest-image'>  
-                <img src={img} alt="Interest" />  
-            </div>  
-        </div>  
+                    <div className="interest">
+                        <div>
+                            <h1>I'm Interested in</h1>
+                            <ul>
+                                {Object.keys(imageMap).map((key) => (
+                                    <li key={key} onMouseEnter={() => setImg(imageMap[key])}>
+                                        {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, " $1")}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <img className='interest-image' key={img} src={img} alt="Interest" />
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -96,70 +96,70 @@ const Portfolio = () => {
             <section id="skills">
                 <h1>SKILLS <span role="img" aria-label="tools">🔧</span></h1>
                 <div class="container">
-            <div  style={{margin:"15px"}}>
-                Java
-                <div class="skill">
-                    <div id="skill" class="skill-java"></div>
-                </div>
-            </div>
+                    <div style={{ margin: "15px" }}>
+                        Java
+                        <div class="skill">
+                            <div id="skill" class="skill-java"></div>
+                        </div>
+                    </div>
 
-            <div style={{margin:"15px"}}>
-                C++
-                <div class="skill">
-                    <div id="skill" class="skill-cpp"></div>
-                </div>
-            </div>
+                    <div style={{ margin: "15px" }}>
+                        C++
+                        <div class="skill">
+                            <div id="skill" class="skill-cpp"></div>
+                        </div>
+                    </div>
 
-            <div style={{margin:"15px"}}>
-                Python
-                <div class="skill">
-                    <div id="skill" class="skill-python"></div>
+                    <div style={{ margin: "15px" }}>
+                        Python
+                        <div class="skill">
+                            <div id="skill" class="skill-python"></div>
+                        </div>
+                    </div>
+                    <div style={{ margin: "15px" }}>
+                        ReactJS
+                        <div class="skill">
+                            <div id="skill" class="skill-react"></div>
+                        </div>
+                    </div>
+                    <div style={{ margin: "15px" }}>
+                        HTML, CSS & JS
+                        <div class="skill">
+                            <div id="skill" class="skill-html"></div>
+                        </div>
+                    </div>
+                    <div style={{ margin: "15px" }}>
+                        Kotlin
+                        <div class="skill">
+                            <div id="skill" class="skill-kotlin"></div>
+                        </div>
+                    </div>
+                    <div style={{ margin: "15px" }}>
+                        Linux
+                        <div class="skill">
+                            <div id="skill" class="skill-linux"></div>
+                        </div>
+                    </div>
+                    <div style={{ margin: "15px" }}>
+                        Android
+                        <div class="skill">
+                            <div id="skill" class="skill-android"></div>
+                        </div>
+                    </div>
+                    <div style={{ margin: "15px" }}>
+                        MySQL DBMS
+                        <div class="skill">
+                            <div id="skill" class="skill-dbms"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                ReactJS
-                <div class="skill">
-                    <div id="skill" class="skill-react"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                HTML, CSS & JS
-                <div class="skill">
-                    <div id="skill" class="skill-html"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                Kotlin
-                <div class="skill">
-                    <div id="skill" class="skill-kotlin"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                Linux
-                <div class="skill">
-                    <div id="skill" class="skill-linux"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                Android
-                <div class="skill">
-                    <div id="skill" class="skill-android"></div>
-                </div>
-            </div>
-            <div style={{margin:"15px"}}>
-                MySQL DBMS
-                <div class="skill">
-                    <div id="skill" class="skill-dbms"></div>
-                </div>
-            </div>
-        </div>
             </section>
 
             <section id="projects">
                 <h1>PROJECTS <span role="img" aria-label="projects">🧑🏻‍💻</span></h1>
                 <div className="container">
                     {projects.map((project) => (
-                        <div key={project.title} className={project.className}   style={{animationDelay: `${Math.random() * 2}s`}}>
+                        <div key={project.title} className={project.className} style={{ animationDelay: `${Math.random() * 2}s` }}>
                             <div>
                                 <h3>{project.title}</h3>
                                 <b>Description</b>
@@ -228,14 +228,14 @@ const projects = [
     {
         title: 'IoT-Based Web-Controlled Servo & Distance Monitoring',
         description: 'Developed a full-stack IoT system to remotely control a servo motor and monitor real-time distance data using cloud-based automation.',
-        technologies: [ "Arduino", "Node.js", "Express", "React", "Axios", "SerialPort"],
+        technologies: ["Arduino", "Node.js", "Express", "React", "Axios", "SerialPort"],
         link: 'https://github.com/KAVIN-KJ/Servo-Motor-Remote-Interfacing',
         className: 'IoT',
     },
     {
         title: 'Billing Information System',
         description: ' Designed a system to generate and print billing information for purchase orders with accuracy using ReactJS.',
-        technologies: [ "React","Javascript"],
+        technologies: ["React", "Javascript"],
         link: 'https://github.com/KAVIN-KJ/Purchase_Orders',
         className: 'Billing_System',
     }

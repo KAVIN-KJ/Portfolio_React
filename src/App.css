@@ -215,20 +215,27 @@ body::-webkit-scrollbar{
   transition: 500ms ease;
 }
 .interest .interest-image{
-    box-sizing: border-box;
     width: 250px;
     height: 250px;
+    opacity: 1;
+    animation: fade 2000ms ease;
+}
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .interest .interest-image img{
-  width: 250px;
-  height: 250px;
+    scale: 1.2;
 }
 #About .interest li:hover{
   background-color: rgb(199, 0, 199);
   box-shadow: 0px 0px 10px rgb(233, 92, 233);
   scale: 1.2;
   position: relative;
-  /* transform: rotate(-2deg); */
 }
 
 #education{
@@ -378,8 +385,9 @@ body::-webkit-scrollbar{
 }
 #projects .container{
   margin-top: 50px;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 50px;
+  padding: 0px 40px;
 }
 .tictac{
   min-width: 310px;
@@ -574,10 +582,21 @@ body::-webkit-scrollbar{
     width: 100px;
     height: 100px;
   }
-  #About .interest .interest-image img{
+  #About.interest .interest-image img {
     width: 100px;
     height: 100px;
-  }
+    opacity: 0;
+    border: 1px solid;
+    transform: scale(0.9);
+    transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.interest .interest-image img[src] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
   #connect{
       flex-direction: column;
       justify-content: center;
