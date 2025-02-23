@@ -69,8 +69,14 @@ body::-webkit-scrollbar{
   margin-left: 10px;
   display: inline-block;
   transition: 500ms ease;
-  animation: name 2s infinite alternate;
+  animation: name 2s steps(10) infinite alternate, blink 1s steps(1) infinite;
+  color: rgb(211, 0, 211);
   border-right: 2px solid;
+}
+@keyframes blink{
+  50%{
+    border-color: transparent;
+  }
 }
 @keyframes wave {
   0%{
@@ -86,7 +92,6 @@ body::-webkit-scrollbar{
  }
  100%{
   width: 100%;
-  color: purple;
  }
 }
 #home{
