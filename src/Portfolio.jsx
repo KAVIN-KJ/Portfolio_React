@@ -198,6 +198,13 @@ const Portfolio = () => {
 
 const projects = [
     {
+        title: 'Zeta an Online Compiler',
+        description: ' Developed an online compiler with a React.js frontend and a Python Flask backend, hosting the server on an AWS EC2 instance.',
+        technologies: ['React JS', 'Python', 'Flask', 'AWS EC2'],
+        link: 'https://github.com/KAVIN-KJ/Zeta',
+        className: 'zeta',
+    },
+    {
         title: 'TIC-TAC-TOE using Java',
         description: 'Developed a simple Tic Tac Toe game for Android using Java. Featured an intuitive interface, turn-based gameplay, and basic win logic.',
         technologies: ['Android Studio', 'Java'],
