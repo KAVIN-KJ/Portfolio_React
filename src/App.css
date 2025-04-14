@@ -405,9 +405,11 @@ body::-webkit-scrollbar{
   justify-content: space-between;
   padding: 20px;
   border-radius: 20px;
+  box-sizing: border-box;
   animation: shade 2s infinite alternate;
 }
 .tictac{
+  box-sizing: border-box;
   min-width: 310px;
   max-width: 350px;
   margin: 10px;
@@ -421,6 +423,7 @@ body::-webkit-scrollbar{
   animation: shade 2s infinite alternate;
 }
 .calci{
+  box-sizing: border-box;
   min-width: 310px;
   max-width: 350px;
   margin: 10px;
@@ -435,6 +438,7 @@ body::-webkit-scrollbar{
 }
 .zeno{
   min-width: 310px;
+  box-sizing: border-box;
   max-width: 350px;
   margin: 10px;
   flex: 1;
@@ -451,6 +455,7 @@ body::-webkit-scrollbar{
   max-width: 350px;
   margin: 10px;
   flex: 1;
+  box-sizing: border-box;
   border: 1px solid purple;
   display: flex;
   flex-direction: column;
@@ -468,6 +473,7 @@ body::-webkit-scrollbar{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
   padding: 20px;
   border-radius: 20px;
   animation: shade 2s infinite alternate;
@@ -485,6 +491,8 @@ body::-webkit-scrollbar{
   padding: 20px;
   border-radius: 20px;
   animation: shade 2s infinite alternate;
+  box-sizing: border-box;
+
 }
 /* #projects{
   height: 100vh;
@@ -561,9 +569,24 @@ body::-webkit-scrollbar{
 }
 @media screen and (max-width: 700px) {
 
+  #home{
+    height: 100vh;
+  }
+
+  #About{
+    flex-direction: column;
+    justify-content: flex-start;
+    height: fit-content;
+    min-height: 100vh;
+    max-height: 200vh;
+    margin-top: 100px;
+    box-sizing: border-box;
+  }
   
   .navbar{
     overflow-x: hidden;
+    font-size: 10px;
+    flex-wrap: wrap;
   }
   .nav a{
     font-size: 12px;
@@ -573,8 +596,8 @@ body::-webkit-scrollbar{
     text-wrap: nowrap;
   }
   #projects .container{
-    flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
     align-items: center;
   }
   .resume a{
