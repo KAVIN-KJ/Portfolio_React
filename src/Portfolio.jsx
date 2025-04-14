@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import './index.css';
 import profile from './assets/profile_new1.jpeg'
@@ -23,6 +24,12 @@ const Portfolio = () => {
         AIML
     };
     const [img, setImg] = useState(frontend);
+    useEffect(() => {
+        Object.values(imageMap).forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, []);
     return (
         <div className='portfolio-container'>
             <div className="scroll-watcher"></div>
