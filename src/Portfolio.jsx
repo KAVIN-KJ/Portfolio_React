@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import './index.css';
 import profile from './assets/profile_new1.jpeg'
@@ -23,6 +24,12 @@ const Portfolio = () => {
         AIML
     };
     const [img, setImg] = useState(frontend);
+    useEffect(() => {
+        Object.values(imageMap).forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, []);
     return (
         <div className='portfolio-container'>
             <div className="scroll-watcher"></div>
@@ -197,6 +204,13 @@ const Portfolio = () => {
 };
 
 const projects = [
+    {
+        title: 'Zeta an Online Compiler',
+        description: ' Developed an online compiler with a React.js frontend and a Python Flask backend, hosting the server on an AWS EC2 instance.',
+        technologies: ['React JS', 'Python', 'Flask', 'AWS EC2'],
+        link: 'https://github.com/KAVIN-KJ/Zeta',
+        className: 'zeta',
+    },
     {
         title: 'TIC-TAC-TOE using Java',
         description: 'Developed a simple Tic Tac Toe game for Android using Java. Featured an intuitive interface, turn-based gameplay, and basic win logic.',
