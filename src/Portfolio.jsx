@@ -38,6 +38,7 @@ const Portfolio = () => {
                     <div className="links"><a className="home" href="#home">Home</a></div>
                     <div className="links"><a className="about" href="#About">About</a></div>
                     <div className="links"><a className="education" href="#education">Education</a></div>
+                    <div className="links"><a className="experience" href="#experience">Experience</a></div>
                     <div className="links"><a className="skills" href="#skills">Skills</a></div>
                     <div className="links"><a className="projects" href="#projects">Projects</a></div>
                     <div className="links"><a className="connect" href="#connect">Connect With Me</a></div>
@@ -100,9 +101,32 @@ const Portfolio = () => {
                 </div>
             </section>
 
+            <section id="experience">
+                <h1>EXPERIENCE <span role="img" aria-label="briefcase">💼</span></h1>
+                <div className="container">
+                    <div className="experience-entry">
+                        <h3 >Frontend Developer Intern – <a style={{ color: 'purple', textDecoration: "underline" }} href="https://www.mobiusengine.ai/" target='blank'>MobiusEngine</a> </h3>
+                        <b style={{ color: 'purple' }}>May 2025</b>
+                        <ul>
+                            <li>Developed core UI components for the JobSearchAI platform using ReactJS.</li>
+                            <li>Integrated REST APIs and implemented filtering, routing, and responsive design.</li>
+                            <li>Collaborated directly with the CEO and design team to align product goals.</li>
+                            <li>Worked in a fast-paced startup environment with a focus on real-time feature delivery.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
             <section id="skills">
                 <h1>SKILLS <span role="img" aria-label="tools">🔧</span></h1>
                 <div class="container">
+                    <div style={{ margin: "15px" }}>
+                        ReactJS
+                        <div class="skill">
+                            <div id="skill" class="skill-react"></div>
+                        </div>
+                    </div>
                     <div style={{ margin: "15px" }}>
                         Java
                         <div class="skill">
@@ -110,6 +134,12 @@ const Portfolio = () => {
                         </div>
                     </div>
 
+                    <div style={{ margin: "15px" }}>
+                        HTML, CSS & JS
+                        <div class="skill">
+                            <div id="skill" class="skill-html"></div>
+                        </div>
+                    </div>
                     <div style={{ margin: "15px" }}>
                         C++
                         <div class="skill">
@@ -121,18 +151,6 @@ const Portfolio = () => {
                         Python
                         <div class="skill">
                             <div id="skill" class="skill-python"></div>
-                        </div>
-                    </div>
-                    <div style={{ margin: "15px" }}>
-                        ReactJS
-                        <div class="skill">
-                            <div id="skill" class="skill-react"></div>
-                        </div>
-                    </div>
-                    <div style={{ margin: "15px" }}>
-                        HTML, CSS & JS
-                        <div class="skill">
-                            <div id="skill" class="skill-html"></div>
                         </div>
                     </div>
                     <div style={{ margin: "15px" }}>
@@ -205,6 +223,13 @@ const Portfolio = () => {
 
 const projects = [
     {
+        title: 'JobSearchAI - Job Portal Frontend',
+        description: 'Developed the frontend for JobSearchAI, a modern job portal platform. Designed and implemented responsive UI components including filters, search results, and dynamic routing. Closely collaborated with the design team to match Figma specifications and optimized the UI for performance across various screen sizes.',
+        technologies: ['ReactJS', 'CSS3', 'Responsive Design', 'React Router DOM'],
+        link: 'https://jobsearchai.mobiusengine.ai/',
+        className: 'jobsearchai',
+    },
+    {
         title: 'Zeta an Online Compiler',
         description: ' Developed an online compiler with a React.js frontend and a Python Flask backend, hosting the server on an AWS EC2 instance.',
         technologies: ['React JS', 'Python', 'Flask', 'AWS EC2'],
@@ -252,7 +277,8 @@ const projects = [
         technologies: ["React", "Javascript"],
         link: 'https://github.com/KAVIN-KJ/Purchase_Orders',
         className: 'Billing_System',
-    }
+    },
+
 ];
 
 const socialLinks = [

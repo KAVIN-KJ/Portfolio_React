@@ -261,6 +261,45 @@ body::-webkit-scrollbar{
   border-bottom: 2px solid purple;
   padding-bottom: 20px;
 }
+
+
+#experience {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#experience h1 {
+  font-size: 35px;
+  text-align: center;
+}
+
+#experience .container {
+  width: 90%;
+  max-width: 800px;
+}
+
+.experience-entry {
+  margin-top: 20px;
+  padding: 20px;
+  border-left: 4px solid purple;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.experience-entry h3 {
+  margin-bottom: 10px;
+}
+
+.experience-entry ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+
+
 #skills{
   padding: 50px;
   display: flex;
@@ -338,7 +377,7 @@ body::-webkit-scrollbar{
 }
 
 .skill-react{
-  max-width: 60%;
+  max-width: 90%;
   background-color: purple;
   height: 100%;
   width: 0%;
@@ -393,6 +432,20 @@ body::-webkit-scrollbar{
   justify-content: center;
   margin-bottom: 50px;
   padding: 0px 40px;
+}
+.jobsearchai{
+  min-width: 310px;
+  max-width: 350px;
+  margin: 10px;
+  flex: 1;
+  border: 1px solid purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  animation: shade 2s infinite alternate;
 }
 .zeta{
   min-width: 310px;
